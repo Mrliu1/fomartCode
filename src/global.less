@@ -1,0 +1,125 @@
+@import '~antd/lib/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.clickRowRed {
+  background: red;
+}
+a {
+  position: relative;
+  z-index: 3;
+}
+form,
+p,
+button,
+input,
+textarea {
+  position: relative;
+  z-index: 3;
+}
+.ant-form {
+  position: relative;
+  z-index: 10;
+}
+.fontRed-required{
+
+}
+.fontRed-required::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 14px;
+    font-family: SimSun,sans-serif;
+    line-height: 1;
+    content: '*';
+}
+.antRequired .ant-form-item-label::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 14px;
+    font-family: SimSun,sans-serif;
+    line-height: 1;
+    content: '*';
+}
+.tableFormSelf{
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+    padding: 2px 2px;
+  }
+  .ant-select{
+    width:100%;
+    min-width:80px;
+    max-width:100%;
+    margin:0;
+  }
+  .ant-input{
+    min-width:80px;
+    max-width:100%;
+    margin:0;
+  }
+}
+// 表格搜素的查询栏
+.queryRow{
+    display:flex;
+    align-items: center;
+    .queryCol{
+      .ant-form-item-control-wrapper{
+          display:block !important;
+      }
+    }
+}
+.formSelect{
+  .ant-form-item-control-wrapper{
+    margin-top: 24px;
+    display:inline-block !important;
+    width:80%;
+  }
+}
